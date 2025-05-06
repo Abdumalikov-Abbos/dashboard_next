@@ -1,6 +1,11 @@
-import SideNav from '@/app/ui/dashboard/sidenav';
- 
+import SideNav from "@/app/ui/dashboard/sidenav";
+import { redirect } from "next/dist/server/api-utils";
+export const experimental_ppr = true;
 export default function Layout({ children }: { children: React.ReactNode }) {
+  // if(!user){
+  //   redirect("/login");
+  // }
+  
   return (
     <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
       <div className="w-full flex-none md:w-64">
